@@ -1,0 +1,30 @@
+
+	<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+		 data-sly-call="${clientlib.all @ categories='base1'}"/>
+  
+ 
+  <sly data-sly-use.var1="com.website.core.models.Blogpost">
+  
+       
+          <div class="card flex-md-row mb-4 shadow-sm h-md-400">
+            <div class="card-body d-flex flex-column align-items-start">
+			<img   class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/320x150?theme=thumb" alt="Card image cap">
+              </br>
+              <strong class="d-inline-block mb-2 text-success">${var1.typeofblog}</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="${var1.posttitlelink}.html">${var1.title}</a>
+              </h3>
+              <div class="mb-1 text-muted">Jan 23</div>
+              <p class="card-text mb-auto">${var1.description}</p>
+              <a href="${var1.posttitlelink}.html">Continue reading</a>
+            </div>
+          </div>
+        
+        
+        
+      
+ 		
+ 		
+
+	
+	

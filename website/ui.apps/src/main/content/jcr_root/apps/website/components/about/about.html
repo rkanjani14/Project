@@ -1,0 +1,16 @@
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.all @ categories='base1'}" />
+
+<sly data-sly-use.var1="com.website.core.models.About"> </sly>
+
+
+
+				<div class="p-3 mb-3 bg-light rounded">
+					<h4 class="font-italic">About</h4>
+					<p class="mb-0">
+						${var1.aboutdata}
+					</p>
+				</div>
+
+		

@@ -1,0 +1,55 @@
+
+	<sly data-sly-use.var1="com.website.core.models.Header"></sly>
+	
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" 
+data-sly-call="${clientlib.all @ categories='base1'}"/>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+
+    <title>Bootcamp Blog</title>
+
+    <link rel="canonical" href="homepage.html">
+
+   <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link hreef="dist/css/custom.css">
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="blog.css" rel="stylesheet">
+  </head>
+   <body>
+   
+   
+      <header  class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-12 text-center">
+            <a class="blog-header-logo text-dark" href="${var1.websitelogolink}.html">
+				<img src=${var1.websitelogo} height="60px">
+				${var1.websiteheading}
+			</a>
+          </div>
+        </div>
+      </header>
+	
+	
+	<div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex">
+        
+        <sly data-sly-test="${var1.pagelist}" data-sly-list="${var1.pagelist}">
+          <a class="p-2 text-muted" href="${item.navlink}.html">${item.navlabel}</a>
+          </sly>
+          
+        </nav>
+      </div>
+	
+	
+	 </body>
+</html>
+   

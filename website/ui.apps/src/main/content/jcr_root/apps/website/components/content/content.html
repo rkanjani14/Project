@@ -1,0 +1,16 @@
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.all @ categories='base1'}" />
+
+<sly data-sly-use.var1="com.website.core.models.Content"> </sly>
+
+
+
+				<div class="blog-post">
+
+					<p>${var1.contentdata  @context = 'html'}</p>
+
+				</div>
+				<!-- /.blog-post -->
+
+			

@@ -1,0 +1,22 @@
+
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.all @ categories='base1'}" />
+
+<sly data-sly-use.var1="com.website.core.models.Heading">
+
+<div class="container">
+	<main role="main" class="container">
+		<div class="row">
+			<div class="col-md-8 blog-main">
+
+				<div class="blog-post">
+					<h2 class="blog-post-title">${var1.posttitle}</h2>
+					<p class="blog-post-meta">
+						January 1, 2014 by ${var1.author}
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
